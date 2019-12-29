@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F61F67ED23B95E0B0048AB1B /* chest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F61F67EC23B95E0B0048AB1B /* chest.swift */; };
+		F686589823B7DC1600829BDD /* characters.swift in Sources */ = {isa = PBXBuildFile; fileRef = F686589723B7DC1600829BDD /* characters.swift */; };
+		F686589A23B7DD5300829BDD /* charactersBot.swift in Sources */ = {isa = PBXBuildFile; fileRef = F686589923B7DD5300829BDD /* charactersBot.swift */; };
 		F6DD745C23B6629F00F67EB4 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6DD745B23B6629F00F67EB4 /* main.swift */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +26,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		F61F67EC23B95E0B0048AB1B /* chest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chest.swift; sourceTree = "<group>"; };
+		F686589723B7DC1600829BDD /* characters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = characters.swift; sourceTree = "<group>"; };
+		F686589923B7DD5300829BDD /* charactersBot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = charactersBot.swift; sourceTree = "<group>"; };
 		F6DD745823B6629F00F67EB4 /* Projet3-RPG-OC */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Projet3-RPG-OC"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6DD745B23B6629F00F67EB4 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -58,6 +64,9 @@
 			isa = PBXGroup;
 			children = (
 				F6DD745B23B6629F00F67EB4 /* main.swift */,
+				F686589723B7DC1600829BDD /* characters.swift */,
+				F686589923B7DD5300829BDD /* charactersBot.swift */,
+				F61F67EC23B95E0B0048AB1B /* chest.swift */,
 			);
 			path = "Projet3-RPG-OC";
 			sourceTree = "<group>";
@@ -121,6 +130,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				F6DD745C23B6629F00F67EB4 /* main.swift in Sources */,
+				F61F67ED23B95E0B0048AB1B /* chest.swift in Sources */,
+				F686589823B7DC1600829BDD /* characters.swift in Sources */,
+				F686589A23B7DD5300829BDD /* charactersBot.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

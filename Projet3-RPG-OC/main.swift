@@ -8,5 +8,9 @@
 
 import Foundation
 
-print("Hello, World!")
+func greeting(user: String)
+{
+    print("Hello, \(user). How are you?")
+}
+greeting(user: "Arthur")
 
