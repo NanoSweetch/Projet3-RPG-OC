@@ -44,9 +44,7 @@ class charactersTeam {
 
 class barbarian: charactersTeam {
       override init(nameHero: String, lifePoint: Int, actionPoint: Int) {
-            self.nameHero = " "
-            self.lifePoint = 100
-            self.actionPoint = 20
+        super.init(nameHero: " ", lifePoint: 100, actionPoint: 20)
         }
     
 }
@@ -55,9 +53,7 @@ class barbarian: charactersTeam {
 
 class paladin: charactersTeam {
     override init(nameHero: String, lifePoint: Int, actionPoint: Int) {
-             self.nameHero = " "
-             self.lifePoint = 100
-             self.actionPoint = 15
+        super.init(nameHero: " ", lifePoint: 100, actionPoint: 15)
          }
 }
 
@@ -76,15 +72,14 @@ class healer: charactersTeam {
     }
     
     
+// Trouver comment ajouter une nouvelle variable à une classe fille
     
-    init(health: Int) {
+    init(health: 10) {
         self.health = 10
     }
     
     override init(nameHero: String, lifePoint: Int, actionPoint: Int) {
-            self.nameHero = " "
-            self.lifePoint = 100
-            self.actionPoint = 5
+        super.init(nameHero: " ", lifePoint: 100, actionPoint: 5)
          }
     
 }

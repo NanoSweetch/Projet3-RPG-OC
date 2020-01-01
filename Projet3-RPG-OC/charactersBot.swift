@@ -44,12 +44,8 @@ class charactersBot {
 
 class barbarianBot: charactersBot {
     
-    //Erreur on dirait qu'il y a un conflit entre la classe barbarianBot & paladinBot
-    
     override init(nameHero: String, lifePoint: Int, actionPoint: Int) {
-        self.nameHero = " "
-        self.lifePoint = 100
-        self.actionPoint = 15
+        super.init(nameHero: " ", lifePoint: 100, actionPoint: 15)
     }
 }
 
@@ -57,8 +53,8 @@ class barbarianBot: charactersBot {
 
 class paladinBot: charactersBot {
     override init(nameHero: String, lifePoint: Int, actionPoint: Int) {
-        self.nameHero = " "
-        self.lifePoint = 100
-        self.actionPoint = 20
+        super.init(nameHero: " ", lifePoint: 100, actionPoint: 20)
     }
 }
+
+// Clase du personnage 
