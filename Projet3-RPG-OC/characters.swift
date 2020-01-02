@@ -49,6 +49,18 @@ class barbarian: charactersTeam {
         super.init(nameHero: " ", lifePoint: 100, actionPoint: 20, heroArms: "")
         }
     
+    
+//J'essai de pouvoir demander dans le terminal une valeur pour qu'elle s'ajoute dans namehero de la classe en question
+// Fonction pour récupérer le nom choisi pour le Barbare
+   func readNameBarbarian() -> String? {
+// On demande un nom pour le personnage Barbare
+    print("Quel nom souhaitez-vous donner à votre Barbare ?")
+
+    // On convertie et on renvoie la réponse
+    if readLine() != nil {
+        return nameHero
+    }
+    
 }
 
 // Classe du personnage paladin
@@ -78,5 +90,4 @@ class healer: charactersTeam {
         super.init(nameHero: " ", lifePoint: 100, actionPoint: 5, heroArms: "")
          }
 }
-
 

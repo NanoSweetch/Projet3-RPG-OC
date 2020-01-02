@@ -8,9 +8,9 @@
 
 import Foundation
 
-func greeting(user: String)
-{
-    print("Hello, \(user). How are you?")
-}
-greeting(user: "Arthur")
+// Le programme commence par demander au joueur de choisir des noms pour les 3 personnages de son équipe
 
+print("Bonjour et bienvenue! \nPour commencer, choisissez un nom pour chacun des trois personnages de votre équipe.")
+
+// Je ne parviens pas à appeller la fonction créer dans le fichier characters
+barbarian.readNameBarbarian()

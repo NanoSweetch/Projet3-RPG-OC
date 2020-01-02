@@ -47,7 +47,7 @@ class charactersBot {
 class barbarianBot: charactersBot {
     
     override init(nameHero: String, lifePoint: Int, actionPoint: Int, heroArms: String) {
-        super.init(nameHero: " ", lifePoint: 100, actionPoint: 15, heroArms: "")
+        super.init(nameHero: "Grund", lifePoint: 100, actionPoint: 15, heroArms: "")
     }
 }
 
@@ -55,7 +55,7 @@ class barbarianBot: charactersBot {
 
 class paladinBot: charactersBot {
     override init(nameHero: String, lifePoint: Int, actionPoint: Int, heroArms: String) {
-        super.init(nameHero: " ", lifePoint: 100, actionPoint: 20, heroArms: "")
+        super.init(nameHero: "Rasdir", lifePoint: 100, actionPoint: 20, heroArms: "")
     }
 }
 
@@ -63,6 +63,6 @@ class paladinBot: charactersBot {
 
 class warriorBot: charactersBot {
     override init(nameHero: String, lifePoint: Int, actionPoint: Int, heroArms: String) {
-        super.init(nameHero: " ", lifePoint: 100, actionPoint: 15, heroArms: "")
+        super.init(nameHero: "Dirran", lifePoint: 100, actionPoint: 15, heroArms: "")
     }
 }
