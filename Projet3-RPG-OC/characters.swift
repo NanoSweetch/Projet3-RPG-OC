@@ -14,6 +14,7 @@ class charactersTeam {
     var nameHero: String
     private var _lifePoint: Int
     private var _actionPoint: Int
+    var heroArms: String
     
     var lifePoint: Int {
         get {
@@ -33,18 +34,19 @@ class charactersTeam {
         }
     }
     
-    init(nameHero: String, lifePoint: Int, actionPoint: Int) {
+    init(nameHero: String, lifePoint: Int, actionPoint: Int, heroArms: String) {
         self.nameHero = nameHero
         self._lifePoint = lifePoint
         self._actionPoint = actionPoint
+        self.heroArms = heroArms
     }
 }
 
 // Classe du personnage barbare
 
 class barbarian: charactersTeam {
-      override init(nameHero: String, lifePoint: Int, actionPoint: Int) {
-        super.init(nameHero: " ", lifePoint: 100, actionPoint: 20)
+    override init(nameHero: String, lifePoint: Int, actionPoint: Int, heroArms: String) {
+        super.init(nameHero: " ", lifePoint: 100, actionPoint: 20, heroArms: "")
         }
     
 }
@@ -52,8 +54,8 @@ class barbarian: charactersTeam {
 // Classe du personnage paladin
 
 class paladin: charactersTeam {
-    override init(nameHero: String, lifePoint: Int, actionPoint: Int) {
-        super.init(nameHero: " ", lifePoint: 100, actionPoint: 15)
+    override init(nameHero: String, lifePoint: Int, actionPoint: Int, heroArms: String) {
+        super.init(nameHero: " ", lifePoint: 100, actionPoint: 15, heroArms: "")
          }
 }
 
@@ -71,17 +73,10 @@ class healer: charactersTeam {
         }
     }
     
-    
-// Trouver comment ajouter une nouvelle variable à une classe fille
-    
-    init(health: 10) {
-        self.health = 10
-    }
-    
-    override init(nameHero: String, lifePoint: Int, actionPoint: Int) {
-        super.init(nameHero: " ", lifePoint: 100, actionPoint: 5)
+    init(nameHero: String, lifePoint: Int, actionPoint: Int, health: Int, heroArms: String) {
+        self._health = health
+        super.init(nameHero: " ", lifePoint: 100, actionPoint: 5, heroArms: "")
          }
-    
 }
 
 
