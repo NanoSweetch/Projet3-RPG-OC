@@ -11,7 +11,7 @@ import Foundation
 // Classe inital des personnages de l'équipe de l'ordinateur
 
 class charactersBot {
-    var nameHero: String
+    let nameHero: String
     private var _lifePoint: Int
     private var _actionPoint: Int
     var heroArms: String
@@ -39,30 +39,5 @@ class charactersBot {
         self._lifePoint = lifePoint
         self._actionPoint = actionPoint
         self.heroArms = heroArms
-    }
-}
-
-// Classe du personnage barbare
-
-class barbarianBot: charactersBot {
-    
-    override init(nameHero: String, lifePoint: Int, actionPoint: Int, heroArms: String) {
-        super.init(nameHero: "Grund", lifePoint: 100, actionPoint: 15, heroArms: "")
-    }
-}
-
-// Classe du personnage paladin
-
-class paladinBot: charactersBot {
-    override init(nameHero: String, lifePoint: Int, actionPoint: Int, heroArms: String) {
-        super.init(nameHero: "Rasdir", lifePoint: 100, actionPoint: 20, heroArms: "")
-    }
-}
-
-// Clase du personnage 
-
-class warriorBot: charactersBot {
-    override init(nameHero: String, lifePoint: Int, actionPoint: Int, heroArms: String) {
-        super.init(nameHero: "Dirran", lifePoint: 100, actionPoint: 15, heroArms: "")
     }
 }
