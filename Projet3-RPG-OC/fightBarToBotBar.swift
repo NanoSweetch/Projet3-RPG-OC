@@ -8,4 +8,6 @@
 
 import Foundation
 
-// Ce fichier contiendra les classes intégrant les fonctions d'action du jeu
+// Initialisation de la classe combat
+
+

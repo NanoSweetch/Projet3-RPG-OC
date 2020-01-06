@@ -11,8 +11,16 @@ import Foundation
 // Classe du personnage barbare
 
 class barbarian: charactersTeam {
-    override init(nameHero: String, lifePoint: Int, actionPoint: Int, heroArms: String) {
-        super.init(nameHero: " ", lifePoint: 100, actionPoint: 20, heroArms: "")
-        }
+    override init(nameHero: String, lifePoint: Int, actionPoint: Int, heroArms: String, heroArmsPower: Int) {
+        super.init(nameHero: "", lifePoint: 100, actionPoint: 20, heroArms: "", heroArmsPower: 10)
+    }
     
+        
+        func fight() {
+            barbarian(actionPoint: Int) += barbarian(heroArmsPower: Int)
+            charactersBot.barbarianBot(actionPoint: Int) += charactersBot.barbarianBot(heroArmsPower: Int)
+            barbarian(actionPoint: Int) -= barbarianBot(actionPoint: Int)
+            
+            
+        }
 }

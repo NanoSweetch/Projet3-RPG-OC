@@ -22,8 +22,8 @@ class healer: charactersTeam {
         }
     }
     
-    init(nameHero: String, lifePoint: Int, actionPoint: Int, health: Int, heroArms: String) {
+    init(nameHero: String, lifePoint: Int, actionPoint: Int, health: Int, heroArms: String, heroArmsPower: Int) {
         self._health = health
-        super.init(nameHero: " ", lifePoint: 100, actionPoint: 5, heroArms: "")
+        super.init(nameHero: " ", lifePoint: 100, actionPoint: 5, heroArms: "", heroArmsPower: 10)
          }
 }

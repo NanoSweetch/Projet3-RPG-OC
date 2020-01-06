@@ -11,34 +11,18 @@ import Foundation
 // Classe inital des personnages de l'équipe du joueur
 
 class charactersTeam {
-    var nameHero: String
-    private var _lifePoint: Int
-    private var _actionPoint: Int
+    var nameHero: String = "No name"
+    var lifePoint: Int
+    var actionPoint: Int
     var heroArms: String
+    var heroArmsPower: Int
     
-    var lifePoint: Int {
-        get {
-            return _lifePoint
-        }
-        set {
-            _lifePoint = newValue
-        }
-    }
-    
-    var actionPoint: Int {
-        get {
-               return _actionPoint
-        }
-        set {
-            _actionPoint = newValue
-        }
-    }
-    
-    init(nameHero: String, lifePoint: Int, actionPoint: Int, heroArms: String) {
+    init(nameHero: String, lifePoint: Int, actionPoint: Int, heroArms: String, heroArmsPower: Int) {
         self.nameHero = nameHero
-        self._lifePoint = lifePoint
-        self._actionPoint = actionPoint
+        self.lifePoint = lifePoint
+        self.actionPoint = actionPoint
         self.heroArms = heroArms
+        self.heroArmsPower = heroArmsPower
     }
     
 }

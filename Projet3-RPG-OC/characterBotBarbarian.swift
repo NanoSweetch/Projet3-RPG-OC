@@ -12,7 +12,8 @@ import Foundation
 
 class barbarianBot: charactersBot {
     
-    override init(nameHero: String, lifePoint: Int, actionPoint: Int, heroArms: String) {
-        super.init(nameHero: "Grund", lifePoint: 100, actionPoint: 15, heroArms: "")
+    override init(nameHero: String, lifePoint: Int, actionPoint: Int, heroArms: String, heroArmsPower: Int, totalPower: Int) {
+        super.init(nameHero: "Grund", lifePoint: 100, actionPoint: 15, heroArms: "", heroArmsPower: 10, totalPower: 10)
     }
+    static var totalPower = actionPoint + heroArmsPower
 }

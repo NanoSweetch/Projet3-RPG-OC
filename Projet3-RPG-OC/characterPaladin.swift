@@ -11,7 +11,7 @@ import Foundation
 // Classe du personnage paladin
 
 class paladin: charactersTeam {
-    override init(nameHero: String, lifePoint: Int, actionPoint: Int, heroArms: String) {
-        super.init(nameHero: " ", lifePoint: 100, actionPoint: 15, heroArms: "")
+    override init(nameHero: String, lifePoint: Int, actionPoint: Int, heroArms: String, heroArmsPower: Int) {
+        super.init(nameHero: " ", lifePoint: 100, actionPoint: 15, heroArms: "", heroArmsPower: 10)
          }
 }

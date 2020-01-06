@@ -11,7 +11,7 @@ import Foundation
 // Classe du personnage paladin
 
 class paladinBot: charactersBot {
-    override init(nameHero: String, lifePoint: Int, actionPoint: Int, heroArms: String) {
-        super.init(nameHero: "Rasdir", lifePoint: 100, actionPoint: 20, heroArms: "")
+    override init(nameHero: String, lifePoint: Int, actionPoint: Int, heroArms: String, heroArmsPower: Int) {
+        super.init(nameHero: "Rasdir", lifePoint: 100, actionPoint: 20, heroArms: "", heroArmsPower: 10)
     }
 }
