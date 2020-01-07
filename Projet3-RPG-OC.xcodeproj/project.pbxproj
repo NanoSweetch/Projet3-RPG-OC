@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		F61F67ED23B95E0B0048AB1B /* chest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F61F67EC23B95E0B0048AB1B /* chest.swift */; };
-		F685A9F823BD156A005DEB0D /* fightBarToBotBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F685A9F723BD156A005DEB0D /* fightBarToBotBar.swift */; };
 		F686589823B7DC1600829BDD /* characters.swift in Sources */ = {isa = PBXBuildFile; fileRef = F686589723B7DC1600829BDD /* characters.swift */; };
 		F686589A23B7DD5300829BDD /* characterBot.swift in Sources */ = {isa = PBXBuildFile; fileRef = F686589923B7DD5300829BDD /* characterBot.swift */; };
 		F6AE0B9323C35D5E0017004C /* characterPaladin.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6AE0B9223C35D5E0017004C /* characterPaladin.swift */; };
@@ -34,7 +33,6 @@
 
 /* Begin PBXFileReference section */
 		F61F67EC23B95E0B0048AB1B /* chest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chest.swift; sourceTree = "<group>"; };
-		F685A9F723BD156A005DEB0D /* fightBarToBotBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fightBarToBotBar.swift; sourceTree = "<group>"; };
 		F686589723B7DC1600829BDD /* characters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = characters.swift; sourceTree = "<group>"; };
 		F686589923B7DD5300829BDD /* characterBot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = characterBot.swift; sourceTree = "<group>"; };
 		F6AE0B9223C35D5E0017004C /* characterPaladin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = characterPaladin.swift; sourceTree = "<group>"; };
@@ -86,7 +84,6 @@
 				F6AE0B9823C35DB40017004C /* characterBotBarbarian.swift */,
 				F6AE0B9A23C35DD80017004C /* characterBotPaladin.swift */,
 				F6AE0B9C23C35DEB0017004C /* characterBotWarrior.swift */,
-				F685A9F723BD156A005DEB0D /* fightBarToBotBar.swift */,
 				F61F67EC23B95E0B0048AB1B /* chest.swift */,
 			);
 			path = "Projet3-RPG-OC";
@@ -159,7 +156,6 @@
 				F6AE0B9523C35D770017004C /* characterBarbarian.swift in Sources */,
 				F686589A23B7DD5300829BDD /* characterBot.swift in Sources */,
 				F6AE0B9723C35D8A0017004C /* characterHealer.swift in Sources */,
-				F685A9F823BD156A005DEB0D /* fightBarToBotBar.swift in Sources */,
 				F6AE0B9B23C35DD80017004C /* characterBotPaladin.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

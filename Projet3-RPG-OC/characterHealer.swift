@@ -11,19 +11,10 @@ import Foundation
 // Classe du personnage soigneur
 
 class healer: charactersTeam {
-    private var _health: Int
-    
-    var health: Int {
-        get {
-            return _health
-        }
-        set {
-            _health = newValue
-        }
-    }
-    
+    var health: Int
+  
     init(nameHero: String, lifePoint: Int, actionPoint: Int, health: Int, heroArms: String, heroArmsPower: Int) {
-        self._health = health
+        self.health = health
         super.init(nameHero: " ", lifePoint: 100, actionPoint: 5, heroArms: "", heroArmsPower: 10)
          }
 }

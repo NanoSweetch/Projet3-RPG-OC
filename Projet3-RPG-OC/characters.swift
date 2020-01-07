@@ -11,7 +11,7 @@ import Foundation
 // Classe inital des personnages de l'équipe du joueur
 
 class charactersTeam {
-    var nameHero: String = "No name"
+    var nameHero: String?
     var lifePoint: Int
     var actionPoint: Int
     var heroArms: String

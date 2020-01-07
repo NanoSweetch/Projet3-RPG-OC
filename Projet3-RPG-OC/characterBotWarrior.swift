@@ -8,7 +8,7 @@
 
 import Foundation
 
-// Clase du personnage guerrier
+// Classe du personnage guerrier
 
 class warriorBot: charactersBot {
     override init(nameHero: String, lifePoint: Int, actionPoint: Int, heroArms: String, heroArmsPower: Int) {

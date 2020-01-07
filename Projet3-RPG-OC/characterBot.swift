@@ -16,16 +16,14 @@ class charactersBot {
     var actionPoint: Int
     var heroArms: String
     var heroArmsPower: Int
-    var totalPower: Int
     
     
-    init(nameHero: String, lifePoint: Int, actionPoint: Int, heroArms: String, heroArmsPower: Int, totalPower: Int) {
+    init(nameHero: String, lifePoint: Int, actionPoint: Int, heroArms: String, heroArmsPower: Int) {
         self.nameHero = nameHero
         self.lifePoint = lifePoint
         self.actionPoint = actionPoint
         self.heroArms = heroArms
         self.heroArmsPower = heroArmsPower
-        self.totalPower = totalPower
     }
     
 }
