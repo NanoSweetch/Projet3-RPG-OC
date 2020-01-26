@@ -2,30 +2,25 @@
 //  characterBarbarian.swift
 //  Projet3-RPG-OC
 //
-//  Created by Maxime DUTOUR on 06/01/2020.
+//  Created by Maxime DUTOUR on 26/01/2020.
 //  Copyright © 2020 Maxime DUTOUR. All rights reserved.
 //
 
 import Foundation
 
-// Classe du personnage barbare
-
-class barbarian: charactersTeam {
-    override init(nameHero: String, lifePoint: Int, actionPoint: Int, heroArms: String, heroArmsPower: Int) {
-        super.init(nameHero: "", lifePoint: 100, actionPoint: 20, heroArms: "", heroArmsPower: 10)
-    }
+// Classe fille du personnage Barbare
+class Barbarian : Character {
     
-// Définition variable qui additionne les valeur Point d'action & dégat arme
-    var barbarianFightPoint: Int {
-        get{
-        return actionPoint + heroArmsPower
-        }
-    }
+   static  var maxLifePoint = 115
+   static  var defaultWeapon = Weapon(nameWeapon: "Dague", damageWeapon: 10, heal: 0)
     
-// Fonction pour combat barbare vs barbareBot (PV barbareBot - Dégat barbare = nouvelle valeur PV barbareBot)
- 
-    func fightBarbarianBarbarianBot() {
-        barbarianBot.lifePoint -= barbarianFightPoint
-        
+    /// <#Description#>
+    /// - Parameter nameHero: <#nameHero description#>
+    init(nameHero: String){
+        super.init(nameHero: nameHero, lifePoint: Barbarian.maxLifePoint, weapon: Barbarian.defaultWeapon)
+    }
+// Fonction permettant d'ajouter les stats du personnage
+    static func features() -> String{
+        return "Le Barbare à \(Barbarian.maxLifePoint) points de vie, une \(Barbarian.defaultWeapon.nameWeapon) et à \(Barbarian.defaultWeapon.damageWeapon) points de dégâts."
     }
 }

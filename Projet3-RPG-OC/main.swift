@@ -8,6 +8,4 @@
 
 import Foundation
 
-// Le programme commence par demander au joueur de choisir des noms pour les 3 personnages de son équipe
-
-print("Bonjour et bienvenue! \nPour commencer, choisissez un nom pour chacun des trois personnages de votre équipe.")
+print("Hello, World!")
