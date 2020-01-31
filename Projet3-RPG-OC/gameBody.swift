@@ -8,10 +8,15 @@
 
 import Foundation
 
+
+/// Class structure to make the game work.
 class Game {
     
+    // Var that initializes each player.
     var player1 : Player
     var player2 : Player
+    
+    // Contains the number of turns in the game, to display the stats at the end.
     var numberTurn = 0
     var arrayDead = [Character]()
     
@@ -27,6 +32,7 @@ class Game {
         statsGame()
     }
     
+    // Function that checks if all the characters of a team are dead.
     func teamIsAlive(player: Player) -> Bool {
         //  the loop for in allows to check if the character to 0pv and if yes delete of the array
         for(index, character)  in player.team.enumerated() {
@@ -43,6 +49,7 @@ class Game {
         return true
     }
     
+    /// Function that displays the winner as well as the game stats.
     func statsGame() {
          print("Oh oh... Toute l'équipe est morte !")
         if teamIsAlive(player: player1) {
@@ -58,20 +65,22 @@ class Game {
     }
 
     
-// Function qui gére le tour de joueur
+// Function that manages the player's turn
     func playerTurn(attacker: Player, defender: Player)  {
         let chest = Chest()
-// Choisissez un personnage dans l'équipe
+        
+// Choose a character from the team
         let attackingCharacter = attacker.selectCharacter(team: attacker.team)
-        /*Vérification du type comme ? (en bas)
-         https://stackoverflow.com/questions/24091882/checking-if-an-object-is-a-given-type-in-swift*/
+        
+        // Check the type to assign a suitable chest to the warrior or healer.
+        // If he's a healer we'll assign a weapon suitable for the Wizard.
         if let wizard = attackingCharacter as? Wizard {
             if let newWeapon = chest.randomWeapon(type: .magic) {
                 print("Vous avez trouvé une meilleure arme de guérison...")
                 wizard.weapon = newWeapon
             }
             
-            // attackingcharacter est un wizard donc faire quelque chose avec la var wizard
+            // If it's a warrior character, we assign a suitable weapon.
             let targetCharacter = attacker.selectCharacter(team: attacker.team)
             wizard.heal(target: targetCharacter)
         } else {
@@ -79,26 +88,26 @@ class Game {
                 print("Vous avez trouvé une meilleure arme d'attaque...")
                 attackingCharacter.weapon = newWeapon
             }
-            // if character is not wizard, attack
+            
+            // If it's not a healer (Wizard), we attack.
             let targetCharacter = attacker.selectCharacter(team: defender.team)
             attackingCharacter.attack(target: targetCharacter)
         }
     }
 
+    // Attack function.
     func fight () {
+        // This loop allows the player to choose his attacker and his opponent.
         while teamIsAlive(player: player1) && teamIsAlive(player: player2){
-                print("Joueur 1 c'est à toi !")
+                print("Joueur 1 c'est à toi ! (Choisis ton combattant, puis un ennemi)")
                 playerTurn(attacker: player1, defender: player2)
                 numberTurn += 1
                 if teamIsAlive(player: player2){
-                    print("Joueur 2 c'est à toi !")
+                    print("Joueur 2 c'est à toi ! (Choisis ton combattant, puis un ennemi)")
                     playerTurn(attacker: player2, defender: player1 )
             }
         }
     }
 }
 
-
-/*Une fois la partie terminée (lorsque tous les personnages d’une équipe sont morts),
-  tu affiches le joueur qui a gagné et les statistiques de jeu :
-  le nombre de tours et la liste des personnages des deux équipes avec leurs propriétés (point de vie, etc.). */
+// Once the game is over (when all the characters of a team are dead), we display the player who won and the game statistics: the number of turns and the list of the characters of both teams with their properties (health point, etc.).

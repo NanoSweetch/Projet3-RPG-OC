@@ -8,7 +8,7 @@
 
 import Foundation
 
-// Classe Personnage cette structure initialise les caractéristiques des personnages
+// Character class this structure initializes the characteristics of the characters
 class Character {
     
     var nameHero : String
@@ -20,14 +20,20 @@ class Character {
         self.lifePoint = lifePoint
         self.weapon = weapon
     }
+    
+    /// Attack function allows a character to inflict his damage points on the opponent.
+    /// - Parameter target: Returning to the character targeted for attack.
     func attack(target: Character) {
            target.lifePoint  -= self.weapon.damageWeapon
            
+        // Loop to check if the character is alive.
            if target.lifePoint <= 0{
               target.lifePoint = 0
                print("\(target.nameHero) n'a plus de vie")
            }
+        // Print which shows the statistics of the attack.
            print("\(self.nameHero) attaque \(target.nameHero) et lui a infligé \(self.weapon.damageWeapon)points de vie. \(target.nameHero) a maintenant \(target.lifePoint)points de vie" )
        }
+    
 }
 

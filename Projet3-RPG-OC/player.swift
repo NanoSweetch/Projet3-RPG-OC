@@ -10,25 +10,28 @@ import Foundation
 
 class Player {
     
+    /// Var which will contain the player's number.
     var playerNumber : Int
-// Stock les personnages choisis par un joueur dans un tableau qui constitue son équipe
+    
+    /// Var which stores in a table the characters chosen by a player who constitutes his team.
     var team = [Character]()
-// Stock les noms choisis par le joueur pour ses personnages dans un tableau
+    
+    /// Var which stores in a table the names of the characters chosen by the player.
     static var names = [String]()
     
+    
+    /// Initialization of the var playerNumber
+    /// - Parameter playerNumber: Returns the number of player 1 or 2.
     init(playerNumber: Int) {
         self.playerNumber = playerNumber // number
     }
     
-    /* Le nom de la fonctionCaractère écouter l'entrée clavier ReadLine : en premier lieu, il vérifie que le nom est
-    bien écrit sans espace, plus de 3 lettres et un nom qui n'existe pas si c'est le cas
-    il retourne le choix, sinon on retourne la fonction (récursivité) */
-    
+    /// Function that listens to the name that the player has chosen for his character.
+    /// On verifie que le nom est écrit sans espace avec plus de 3 caractères. Puis on s'assure que le nom n'éxiste pas déjà.
     func  nameCharacter() -> String {
         if let namePlayer = readLine() {
             
-            // supprimer les espaces avant et après les caractères et vérifier qu'un nom qui n'existe pas
-        // https://stackoverflow.com/questions/28570973/how-should-i-remove-all-the-leading-spaces-from-a-string-swift
+        // If the name has spaces and or less than 3 characters, an error message is returned.
             let choice = namePlayer.trimmingCharacters(in: .whitespaces)
             if choice.count < 3 || Player.names.contains(choice) {
                 print("Choisissez un nom de plus de 3 caractères et qui n'existe pas encore")
@@ -39,10 +42,13 @@ class Player {
         return nameCharacter()
     }
     
+    /// This function initializes the team
     func createTeam() {
-        // si le joueur ne choisit pas ces 3 personnages, le jeu ne peut pas commencer.
+        
+        // If the player does not choose these 3 characters, the game cannot start.
         while team.count < 3 {
-            // voir la liste des personnages disponibles
+            
+            // We display the list of available characters and their characteristics.
             print("""
                 Joueur \(playerNumber) choisissez 3 personnages dans la liste :
                 1 - \(Barbarian.features())
@@ -50,32 +56,36 @@ class Player {
                 3 - \(Warrior.features())
                 4 - \(Wizard.features())
                 """)
-            // écouter l'entrée clavier ReadLine
+            
+            // We listen to the player's choice between 1 and 4.
             if let choice = readLine() {
                 switch choice {
                 case "1":
-                    print("Tu as choisi le barbare, donne-lui un nom :")
-                    // Demander le nom du personnage
-                    // Ajouter le personnage à créer dans l'équipe
-                    // Ajouter le nom du caractère choisi dans le nom du tableau
+                    print("Tu as choisi le Barbare, donne-lui un nom :")
+                    
+                    // Ask for the name of the character.
                     let nameHero = nameCharacter()
                     let character = Barbarian(nameHero: nameHero)
+                    
+                    // Add the character to be created to the team.
                     team.append(character)
+                    
+                    // Add the name of the chosen character in the table name.
                     Player.names.append(nameHero)
                 case "2":
-                    print("Tu as choisi le paladin, donne-lui un nom :")
+                    print("Tu as choisi le Paladin, donne-lui un nom :")
                     let nameHero = nameCharacter()
                     let character = Paladin(nameHero: nameHero)
                     team.append(character)
                     Player.names.append(nameHero)
                 case "3":
-                    print("Tu as choisi le warrior, donne-lui un nom :")
+                    print("Tu as choisi le Warrior, donne-lui un nom :")
                     let nameHero = nameCharacter()
                     let character = Warrior(nameHero: nameHero)
                     team.append(character)
                     Player.names.append(nameHero)
                 case "4":
-                    print("Tu as choisi le sorcier, donne-lui un nom :")
+                    print("Tu as choisi le Sorcier, donne-lui un nom :")
                     let nameHero = nameCharacter()
                     let character = Wizard(nameHero: nameHero)
                     team.append(character)
@@ -90,15 +100,17 @@ class Player {
         print(Player.names)
     }
 
-    //    Choisissez un personnage dans notre équipe
+    /// Function that allows you to choose a character in a team.
+    /// - Parameter team: Displays the list of team characters contained in the table.
     func selectCharacter(team: [Character] ) -> Character  {
         for (index, character) in team.enumerated() {
-            // voir la liste des caractères dans le tableau
-            print("Le personnage \(index + 1) s'appelle \(character.nameHero) et est \(type(of: character)) ")
+            
+            // Displays the complete team list.
+            print("Le personnage \(index + 1) s'appelle \(character.nameHero) et est un \(type(of: character)) ")
             }
-        // Choisissez un personnage dans notre équipe
-               /* vérifier le choixInt entre 1 et team.count pour quand un personnage est mort on ne peut pas choisir cet indice
-                   choix de retourNT-1 */
+        
+        // This loop allows you to listen to the player's choice of character
+        // We check that the number is between 1 and team.count, so you can't choose a dead character.
         if let choice = readLine(){
                 if let choiceInt = Int(choice){
                     if choiceInt >= 1 && choiceInt <= team.count {
@@ -106,7 +118,7 @@ class Player {
                 }
             }
         }
-        //    return function to choose a character
+        // return function to choose a character
         return selectCharacter(team: team)
     }
 }
