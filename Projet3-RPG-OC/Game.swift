@@ -13,12 +13,12 @@ import Foundation
 class Game {
     
     // Var that initializes each player.
-    var player1 : Player
-    var player2 : Player
+    private var player1 : Player
+    private var player2 : Player
     
     // Contains the number of turns in the game, to display the stats at the end.
-    var numberTurn = 0
-    var arrayDead = [Character]()
+    private var numberTurn = 0
+    private var arrayDead = [Character]()
     
     init() {
         
@@ -33,7 +33,7 @@ class Game {
     }
     
     // Function that checks if all the characters of a team are dead.
-    func teamIsAlive(player: Player) -> Bool {
+    private func teamIsAlive(player: Player) -> Bool {
         //  the loop for in allows to check if the character to 0pv and if yes delete of the array
         for(index, character)  in player.team.enumerated() {
             if  character.lifePoint <= 0{
@@ -50,7 +50,7 @@ class Game {
     }
     
     /// Function that displays the winner as well as the game stats.
-    func statsGame() {
+    private func statsGame() {
          print("Oh oh... Toute l'équipe est morte !")
         if teamIsAlive(player: player1) {
             print( "Le joueur 1 a gagné !")
@@ -66,7 +66,7 @@ class Game {
 
     
 // Function that manages the player's turn
-    func playerTurn(attacker: Player, defender: Player)  {
+    private func playerTurn(attacker: Player, defender: Player)  {
         let chest = Chest()
         
 // Choose a character from the team
@@ -96,7 +96,7 @@ class Game {
     }
 
     // Attack function.
-    func fight () {
+    private func fight () {
         // This loop allows the player to choose his attacker and his opponent.
         while teamIsAlive(player: player1) && teamIsAlive(player: player2){
                 print("Joueur 1 c'est à toi ! (Choisis ton combattant, puis un ennemi)")

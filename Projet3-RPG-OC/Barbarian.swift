@@ -12,10 +12,10 @@ import Foundation
 class Barbarian : Character {
     
     /// Var maxLifePoint allows the code to subtract damage to lifePoint from the Character (Barbarian)
-   static  var maxLifePoint = 115
+   static var maxLifePoint = 115
     
      /// Var defaultWeaponWeapon initializes the Character's (Barbarian's) weapon with the default weapon values
-   static  var defaultWeapon = Weapon(nameWeapon: "Dague", damageWeapon: 10, heal: 0)
+   static private let defaultWeapon = Weapon(nameWeapon: "Dague", damageWeapon: 10, heal: 0)
     
     /// Initializer of the Barbarian class thanks to the Character init
     /// - Parameter nameHero: nameHero calls the value stored in the table

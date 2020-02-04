@@ -12,10 +12,10 @@ import Foundation
 class Warrior : Character {
     
     /// Var maxLifePoint allows the code to subtract damage to lifePoint from the Character (Warrior)
-    static let maxLifePoint = 90
+    static var maxLifePoint = 90
     
     /// Var defaultWeaponWeapon initializes the Character's (Warrior's) weapon with the default weapon values
-    static let defaultWeapon = Weapon(nameWeapon: "Marteau", damageWeapon: 20, heal: 0)
+    static private let defaultWeapon = Weapon(nameWeapon: "Marteau", damageWeapon: 20, heal: 0)
     
     /// Initializer of the Warrior class thanks to the Character init
     /// - Parameter nameHero: nameHero calls the value stored in the table

@@ -15,7 +15,7 @@ class Wizard : Character {
     static var maxLifePoint = 80
     
     /// Var defaultWeaponWeapon initializes the Character's (Wizard's) weapon with the default weapon values
-    static var defaultWeapon = Weapon(nameWeapon: "Baguette magique", damageWeapon: 0, heal: 15)
+    static private let defaultWeapon = Weapon(nameWeapon: "Baguette magique", damageWeapon: 0, heal: 15)
     
     /// Initializer of the Wizard class thanks to the Character init
     /// - Parameter nameHero: nameHero calls the value stored in the table
